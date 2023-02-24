@@ -21,6 +21,7 @@ function toDoListcard() {
     .join("");
 }
 
+addBtn.addEventListener("click", updateLists);
 function updateLists() {
   if (addList.value === "") {
     window.alert("Ups..You can't add an empty list");
@@ -31,6 +32,7 @@ function updateLists() {
   }
 }
 
+list.addEventListener("click", listsClicks);
 function listsClicks(event) {
   const listItem = event.target.closest(".list-container");
   const itemIndex = Array.from(list.children).indexOf(listItem);
@@ -52,5 +54,3 @@ function listsClicks(event) {
   }
 }
 
-addBtn.addEventListener("click", updateLists);
-list.addEventListener("click", listsClicks);
