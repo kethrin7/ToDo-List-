@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    align-items:center;
+    background-color:#F2F6F0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.wraper{
+    background-color:#C5D4BB ;
+    border-radius: 15px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+    width: 300px;
+}
+
+.mytasks{
+    padding: 50px 0 20px 10px;
+}
+#addBtn{
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+}
+
+#addList, 
+.Task,
+.completedTask{
+    border:none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size:20px;
+    height: 40px;
+    padding: 5px;
+    width: 250px;
+}
+
+#addList{
+    margin-bottom: 10px;
+}
+
+.completed{
+    padding:10px;
+}
+
+.Task{
+    background-color:#AE4949;
+    margin: 0 0 10px 10px;
+}
+
+.completedTask{
+    background-color:#97B286;
+    margin: 0 0 10px 10px;
+}
+
+.list-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btns{
+    display: flex;
+}
+    
+.doneBtn, 
+.deleteBtn{
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 40px;
+    margin-left:5px;
+    width: 40px;
+}
+.doneBtn{
+    background-color: #97B286;
+}
+.deleteBtn{
+    background-color: #AE4949;
+    margin-right: 5px;
+}
