@@ -17,8 +17,7 @@ function toDoListcard() {
         <button class="deleteBtn">&#9932;</button>
       </div>
     </div>`
-    )
-    .join("");
+    ).join("");
 }
 
 addBtn.addEventListener("click", updateLists);
@@ -36,21 +35,19 @@ list.addEventListener("click", listsClicks);
 function listsClicks(event) {
   const listItem = event.target.closest(".list-container");
   const itemIndex = Array.from(list.children).indexOf(listItem);
+
   if (event.target.classList.contains("deleteBtn")) {
     lists.splice(itemIndex, 1);
     listItem.remove();
-  } else if (event.target.classList.contains("doneBtn")) {
+  } 
+  else if (event.target.classList.contains("doneBtn")) {
     const completedItem = lists.splice(itemIndex, 1)[0];
     completedTasks.push(completedItem);
     listItem.remove();
-    completed.innerHTML = completedTasks
-      .map(
-        (render) =>
-          `<div class="complated-container">
-      <p class="completedTask"> &#8226; ${render}</p>
-      </div>`
-      )
-      .join("");
+
+    completed.innerHTML = completedTasks.map((render) =>
+      `<p class="completedTask"> &#8226; ${render}</p>`
+      ).join("");
   }
 }
 
